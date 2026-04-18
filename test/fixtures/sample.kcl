@@ -1,0 +1,33 @@
+#!/usr/bin/env kcl
+
+// A sample KCL file for kittycad-ts-mode.
+
+import "tests/inputs/cube.obj" as cube
+
+width = 3.1415
+name = "hello world"
+active = true
+point = [0, 0, 10]
+
+fn circle(@x: number(Length), y: number | string): string {
+  radius = x * 2
+  return radius
+}
+
+result = 1
+  |> circle(%)
+
+value = if active {
+  width
+} else if true {
+  0
+} else {
+  2
+}
+
+@(impl = foo, other = bar)
+export fn helper(a, b?) {
+  return a + b
+}
+
+f(1, x = 10)
