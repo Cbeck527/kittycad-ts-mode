@@ -16,15 +16,31 @@ and defun navigation in a single `kittycad-ts-mode.el` file.
 
 ### 1. Install the package
 
-Clone this repository into `~/.emacs.d/site-lisp/kittycad-ts-mode/` and add it
-to your load path:
+Choose one of these installation methods.
+
+#### Install with `elpaca`
 
 ```elisp
-(add-to-list 'load-path (locate-user-emacs-file "site-lisp/kittycad-ts-mode"))
-(require 'kittycad-ts-mode)
+(use-package kittycad-ts-mode
+  :ensure (:host github :repo "Cbeck527/kittycad-ts-mode"))
 ```
 
-If you use `use-package`, this works too:
+#### Install with `straight.el`
+
+```elisp
+(use-package kittycad-ts-mode
+  :straight (kittycad-ts-mode :type git :host github :repo "Cbeck527/kittycad-ts-mode"))
+```
+
+#### Manual install
+
+Clone the repository into `~/.emacs.d/site-lisp/kittycad-ts-mode/`:
+
+```sh
+git clone https://github.com/Cbeck527/kittycad-ts-mode.git ~/.emacs.d/site-lisp/kittycad-ts-mode
+```
+
+Then load it with `use-package`:
 
 ```elisp
 (use-package kittycad-ts-mode
